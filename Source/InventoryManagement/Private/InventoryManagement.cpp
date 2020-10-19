@@ -30,6 +30,17 @@ void FInventoryManagementModule::Test()
 
 	//		1.Create an Inventory(player).
 	UE_LOG(InventoryManagement, Error, TEXT("1.Create an Inventory(player)."));
+	int x = 30;
+	Inventory* player = new Inventory(x);
+
+
+	UE_LOG(InventoryManagement, Error, TEXT("Player Inventory: %s"), *(player->Print()));
+	
+	//inventories.Add();
+	/*for (auto& inventory : inventories)
+	{
+		inventory->Print();
+	}*/
 
 	//		2.Create random inventory(loot).
 	UE_LOG(InventoryManagement, Error, TEXT("2.Create random inventory(loot)."));

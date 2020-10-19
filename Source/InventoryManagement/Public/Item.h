@@ -16,6 +16,7 @@ public:
 
 private:
 
+	
 	static int id;			//Static variable to give an identification number and make each item unique.
 	Pool pool;				//Pool to which the particular object belongs.
 	size_t Stack_size;		//Size in which the object can be put together.
@@ -25,7 +26,7 @@ private:
 	FString	Icon;			//Icon with which the item will be represented.
 
 public:
-
+	FString name;			//Name of the item.
 	///METHODS
 	
 	void Use();				//Use the item if can be used. call On

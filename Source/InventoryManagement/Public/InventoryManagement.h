@@ -23,12 +23,16 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 
-	TArray<Pool> pools;
-	TArray<Inventory> inventories;
+	static TArray<Pool> pools;
+	static TArray<Inventory*> inventories;
 
 	static void Test();				//Function test of the whole system.
 	void CreateAinventory();		//Create a new inventory by necessarily passing the size of this inventory to it.
 	void CreateAlootDrop();			//Create an inventory with X space, which will start to generate objects from a pool and add them to this inventory.
+
+	static bool Find(Item item);					//Return list of pointers to stacks of this item
+	static bool FindByID(int& id);					//Return list of pointers to stacks of this item
+	static bool FindByName(FString s);				//Return list of pointers to stacks of this item
 	
 
 
